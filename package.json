@@ -1,10 +1,14 @@
 {
-  "name": "env-guard",
-  "version": "1.0.0",
+  "name": "@jacquesmmurray/env-guard",
+  "version": "1.0.3",
   "description": "Zero-dependency, type-safe environment variable validator",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jacques-Murray/env-guard.git"
+  },
   "files": [
     "dist"
   ],

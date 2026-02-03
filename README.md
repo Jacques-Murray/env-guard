@@ -14,7 +14,7 @@ Ensure your application crashes early if required environment variables are miss
 ## Installation
 
 ```bash
-npm install env-guard
+npm install @jacquesmmurray/env-guard
 ```
 
 ## Usage
