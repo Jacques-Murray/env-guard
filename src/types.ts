@@ -6,7 +6,7 @@ export type EnvVarType = 'string' | 'number' | 'boolean' | 'email' | 'url';
 /**
  * Configuration definition for a single environment variable.
  */
-export interface EnvVarDefinition<T = any> {
+export interface EnvVarDefinition<T = unknown> {
   /** The expected type of the variable. */
   type?: EnvVarType;
   /** Whether the variable is required. Defaults to true. */
@@ -34,5 +34,5 @@ export type InferEnv<T extends EnvSchema> = {
 type GetType<T extends EnvVarDefinition> = T['type'] extends 'number'
   ? number
   : T['type'] extends 'boolean'
-    ? boolean
-    : string;
+  ? boolean
+  : string;

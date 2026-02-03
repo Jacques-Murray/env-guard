@@ -20,7 +20,7 @@ export class EnvValidator {
    */
   public validate<T extends EnvSchema>(schema: T): InferEnv<T> {
     const errors: string[] = [];
-    const result: any = {};
+    const result: Record<string, unknown> = {};
 
     for (const [key, config] of Object.entries(schema)) {
       const rawValue = this.processEnv[key];
@@ -44,7 +44,7 @@ export class EnvValidator {
     key: string,
     value: string | undefined,
     config: EnvVarDefinition,
-  ): { value?: any; error?: string } {
+  ): { value?: unknown; error?: string; } {
     // 1. Check requirement and defaults
     if (value === undefined || value.trim() === '') {
       if (config.default !== undefined) {
@@ -85,7 +85,7 @@ export class EnvValidator {
     return { value: parsed };
   }
 
-  private parseValue(value: string, type?: string): any {
+  private parseValue(value: string, type?: string): string | number | boolean {
     switch (type) {
       case 'number':
         return Number(value);
