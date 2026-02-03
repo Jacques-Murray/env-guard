@@ -7,11 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.3] - 2026-02-03
 
-### Changed
-- **Config**: Added `repository` field to `package.json` to support NPM Trusted Publishing.
-
-## [1.0.2] - 2026-02-03
-
 ### Added
 - **Core Validation**: Introduced `validateEnv` to strictly validate `process.env` against a defined schema.
 - **Type Safety**: Full TypeScript support with `InferEnv` to automatically derive configuration types from the schema.
@@ -20,3 +15,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Default Values**: Ability to define default values for optional environment variables.
 - **Custom Validation**: Support for custom validator functions for complex logic.
 - **Zero Dependencies**: Lightweight implementation with no external runtime dependencies.
+
+### Changed
+- **Config**: Added `repository` field to `package.json` to support NPM Trusted Publishing.
